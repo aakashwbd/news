@@ -1,0 +1,466 @@
+[10-Mar-2022 01:35:27 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function json() in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:42
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 42
+[10-Mar-2022 01:35:54 America/New_York] PHP Fatal error:  Uncaught Error: Cannot use object of type PDOStatement as array in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:40
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 40
+[10-Mar-2022 01:36:04 America/New_York] PHP Fatal error:  Uncaught Error: Cannot use object of type PDOStatement as array in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:40
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 40
+[10-Mar-2022 01:36:52 America/New_York] PHP Fatal error:  Uncaught Error: Cannot use object of type PDOStatement as array in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:40
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 40
+[10-Mar-2022 01:36:53 America/New_York] PHP Fatal error:  Uncaught Error: Cannot use object of type PDOStatement as array in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:40
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 40
+[10-Mar-2022 01:37:37 America/New_York] PHP Warning:  Undefined property: PDOStatement::$id in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 40
+[10-Mar-2022 01:37:46 America/New_York] PHP Warning:  Attempt to read property "id" on array in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 40
+[10-Mar-2022 01:38:20 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function json() in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:42
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 42
+[10-Mar-2022 01:57:32 America/New_York] PHP Parse error:  syntax error, unexpected token ";", expecting "]" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 48
+[10-Mar-2022 01:57:55 America/New_York] PHP Parse error:  syntax error, unexpected token ";", expecting "]" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 48
+[10-Mar-2022 01:58:19 America/New_York] PHP Fatal error:  Uncaught TypeError: date_format(): Argument #1 ($object) must be of type DateTimeInterface, string given in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:48
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php(48): date_format()
+#1 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 48
+[10-Mar-2022 01:58:20 America/New_York] PHP Fatal error:  Uncaught TypeError: date_format(): Argument #1 ($object) must be of type DateTimeInterface, string given in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:48
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php(48): date_format()
+#1 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 48
+[10-Mar-2022 01:58:52 America/New_York] PHP Warning:  Undefined variable $rowp in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 39
+[10-Mar-2022 01:58:52 America/New_York] PHP Warning:  Trying to access array offset on value of type null in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 39
+[10-Mar-2022 02:19:42 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE
+                            news_id = '4'' at line 3 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/View.php:68
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/View.php(68): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php(35): View->newsViewCount()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/View.php on line 68
+[10-Mar-2022 02:22:14 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE
+                            news_id = '4'' at line 3 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/View.php:68
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/View.php(68): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php(35): View->newsViewCount()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/View.php on line 68
+[10-Mar-2022 02:22:19 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE
+                            news_id = '4'' at line 3 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/View.php:68
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/View.php(68): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php(35): View->newsViewCount()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/View.php on line 68
+[10-Mar-2022 02:22:50 America/New_York] PHP Warning:  Undefined variable $viewCount in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 65
+[10-Mar-2022 02:25:04 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on bool in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 35
+[10-Mar-2022 02:25:15 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on bool in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 37
+[10-Mar-2022 02:27:20 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on bool in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 37
+[10-Mar-2022 02:27:55 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on bool in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 37
+[10-Mar-2022 02:28:44 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 37
+[10-Mar-2022 02:29:14 America/New_York] PHP Warning:  Trying to access array offset on value of type bool in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 37
+[10-Mar-2022 02:30:36 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:58
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 58
+[10-Mar-2022 02:31:54 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:58
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 58
+[10-Mar-2022 02:31:58 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:58
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 58
+[10-Mar-2022 02:32:06 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:58
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 58
+[10-Mar-2022 02:35:21 America/New_York] PHP Parse error:  syntax error, unexpected token "if" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 60
+[10-Mar-2022 02:38:20 America/New_York] PHP Warning:  Trying to access array offset on value of type int in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 62
+[10-Mar-2022 02:38:37 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on int in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 57
+[10-Mar-2022 02:41:39 America/New_York] PHP Warning:  Undefined array key "total" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 63
+[10-Mar-2022 02:42:18 America/New_York] PHP Warning:  Undefined array key "total" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 63
+[10-Mar-2022 02:42:44 America/New_York] PHP Warning:  Undefined array key "total" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 63
+[10-Mar-2022 02:43:03 America/New_York] PHP Warning:  Undefined array key "total" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/show.php on line 63
+[10-Mar-2022 02:52:00 America/New_York] PHP Fatal error:  Uncaught TypeError: date_create(): Argument #2 ($timezone) must be of type ?DateTimeZone, string given in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php:40
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(40): date_create()
+#1 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 40
+[10-Mar-2022 02:52:11 America/New_York] PHP Fatal error:  Uncaught TypeError: date_create(): Argument #2 ($timezone) must be of type ?DateTimeZone, string given in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php:40
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(40): date_create()
+#1 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 40
+[10-Mar-2022 02:52:17 America/New_York] PHP Fatal error:  Uncaught TypeError: date_create(): Argument #2 ($timezone) must be of type ?DateTimeZone, string given in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php:40
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(40): date_create()
+#1 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 40
+[10-Mar-2022 02:54:36 America/New_York] PHP Fatal error:  Uncaught TypeError: date_create(): Argument #2 ($timezone) must be of type ?DateTimeZone, string given in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php:42
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(42): date_create()
+#1 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 42
+[10-Mar-2022 03:41:39 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 03:41:39 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 03:41:39 America/New_York] PHP Warning:  Undefined property: News::$db_table_favourite in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 66
+[10-Mar-2022 03:41:39 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE news_id = news.id) as news_count FROM news WHERE  'Active' AND created_...' at line 1 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:71
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(71): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 71
+[10-Mar-2022 03:42:03 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 03:42:03 America/New_York] PHP Warning:  Undefined property: News::$db_table_favourite in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 66
+[10-Mar-2022 03:42:03 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE news_id = news.id) as news_count FROM news WHERE  'Active' AND created_...' at line 1 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:71
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(71): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 71
+[10-Mar-2022 03:42:39 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 03:42:39 America/New_York] PHP Warning:  Undefined property: News::$db_table_favourite in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 66
+[10-Mar-2022 03:42:39 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE news_id = news.id) as news_count FROM news WHERE  'Active' AND created_...' at line 1 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:71
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(71): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 71
+[10-Mar-2022 03:42:44 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 03:42:44 America/New_York] PHP Warning:  Undefined property: News::$db_table_favourite in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 66
+[10-Mar-2022 03:42:44 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE news_id = news.id) as news_count FROM news WHERE  'Active' AND created_...' at line 1 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:71
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(71): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 71
+[10-Mar-2022 03:45:22 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 03:45:22 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 03:53:08 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 03:53:08 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:22:23 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 04:22:23 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:22:53 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:24:52 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 04:24:52 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:26:14 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 04:26:14 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:26:44 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 04:26:44 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:28:11 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 04:28:11 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:28:17 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:28:53 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:28:58 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:28:59 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 04:28:59 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:29:03 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:29:18 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:29:24 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:29:25 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:31:17 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:32:43 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:33:23 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:35:02 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:36:47 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:38:54 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:39:34 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:39:50 America/New_York] PHP Warning:  Undefined variable $date in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 25
+[10-Mar-2022 04:40:55 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:62
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(62): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 62
+[10-Mar-2022 04:43:00 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:60
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(60): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 60
+[10-Mar-2022 04:43:33 America/New_York] PHP Parse error:  syntax error, unexpected variable "$sqlQuery" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 58
+[10-Mar-2022 04:43:45 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:61
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(61): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 61
+[10-Mar-2022 04:44:13 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:61
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(61): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 61
+[10-Mar-2022 04:44:37 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:61
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(61): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 61
+[10-Mar-2022 04:45:09 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:61
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(61): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 61
+[10-Mar-2022 04:45:33 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:61
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(61): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 61
+[10-Mar-2022 04:45:52 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:61
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(61): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 61
+[10-Mar-2022 04:46:56 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:61
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(61): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 61
+[10-Mar-2022 04:47:06 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:61
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(61): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 61
+[10-Mar-2022 04:47:15 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:61
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(61): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 61
+[10-Mar-2022 04:47:18 America/New_York] PHP Warning:  Undefined variable $stmt in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 60
+[10-Mar-2022 04:47:18 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:62
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(62): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 62
+[10-Mar-2022 04:50:16 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:62
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(62): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 62
+[10-Mar-2022 04:50:39 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:62
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(62): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 62
+[10-Mar-2022 04:51:13 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:62
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(62): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 62
+[10-Mar-2022 04:51:42 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:62
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(62): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 62
+[10-Mar-2022 04:52:01 America/New_York] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:62
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(62): PDOStatement->bindParam()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(25): News->getByDate()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 62
+[10-Mar-2022 05:14:36 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 05:15:12 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 05:36:14 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 05:37:21 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 05:42:58 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 05:43:15 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 05:43:26 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 05:45:23 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 05:49:54 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 05:50:50 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 05:52:24 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 05:55:47 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 05:58:39 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 06:21:49 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 06:22:20 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 06:56:43 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 06:56:55 America/New_York] PHP Warning:  Undefined array key "id" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-by-category.php on line 26
+[10-Mar-2022 06:57:26 America/New_York] PHP Warning:  Array to string conversion in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 231
+[10-Mar-2022 06:57:26 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 4025 CONSTRAINT `news.category_id` failed for `teamkrut_news-raw`.`news` in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:238
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(238): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/update.php(68): News->update()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 238
+[10-Mar-2022 06:57:50 America/New_York] PHP Warning:  Undefined property: stdClass::$category_type in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/update.php on line 20
+[10-Mar-2022 06:58:06 America/New_York] PHP Warning:  Array to string conversion in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 231
+[10-Mar-2022 06:58:06 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 4025 CONSTRAINT `news.category_id` failed for `teamkrut_news-raw`.`news` in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php:238
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php(238): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/update.php(68): News->update()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/News.php on line 238
+[10-Mar-2022 07:07:34 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 07:07:41 America/New_York] PHP Warning:  Undefined array key "id" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-by-category.php on line 26
+[10-Mar-2022 07:07:52 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 07:11:13 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 07:15:48 America/New_York] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 24
+[10-Mar-2022 20:17:48 Asia/Manila] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 28
+[10-Mar-2022 20:24:23 Asia/Manila] PHP Warning:  Undefined array key "Authorization" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 18
+[10-Mar-2022 20:24:23 Asia/Manila] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 33
+[10-Mar-2022 20:24:28 Asia/Manila] PHP Warning:  Undefined array key "Authorization" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 18
+[10-Mar-2022 20:24:28 Asia/Manila] PHP Warning:  Undefined variable $user_id in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 52
+[10-Mar-2022 20:24:28 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+                        user_id = NULL' at line 4 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:42
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php(42): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(52): Favourite->isFavorite()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 42
+[10-Mar-2022 20:25:38 Asia/Manila] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 33
+[10-Mar-2022 20:26:45 Asia/Manila] PHP Fatal error:  Uncaught DomainException: Syntax error, malformed JSON in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php:471
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php(330): Firebase\JWT\JWT::handleJsonError()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php(96): Firebase\JWT\JWT::jsonDecode()
+#2 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(45): Firebase\JWT\JWT::decode()
+#3 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php on line 471
+[10-Mar-2022 20:37:00 Asia/Manila] PHP Fatal error:  Uncaught DomainException: Syntax error, malformed JSON in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php:471
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php(330): Firebase\JWT\JWT::handleJsonError()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php(96): Firebase\JWT\JWT::jsonDecode()
+#2 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(45): Firebase\JWT\JWT::decode()
+#3 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php on line 471
+[10-Mar-2022 20:37:53 Asia/Manila] PHP Fatal error:  Uncaught DomainException: Syntax error, malformed JSON in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php:471
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php(330): Firebase\JWT\JWT::handleJsonError()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php(96): Firebase\JWT\JWT::jsonDecode()
+#2 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(45): Firebase\JWT\JWT::decode()
+#3 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php on line 471
+[10-Mar-2022 20:38:21 Asia/Manila] PHP Fatal error:  Uncaught DomainException: Syntax error, malformed JSON in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php:471
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php(330): Firebase\JWT\JWT::handleJsonError()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php(96): Firebase\JWT\JWT::jsonDecode()
+#2 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(45): Firebase\JWT\JWT::decode()
+#3 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php on line 471
+[10-Mar-2022 20:39:54 Asia/Manila] PHP Warning:  Undefined array key "Authorization" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 18
+[10-Mar-2022 20:42:11 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+                        user_id = '4'' at line 4 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:42
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php(42): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(52): Favourite->isFavorite()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 42
+[10-Mar-2022 20:43:08 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+                        user_id = '4'' at line 4 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:42
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php(42): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(54): Favourite->isFavorite()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 42
+[10-Mar-2022 20:43:22 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+                        user_id = '4'' at line 4 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:42
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php(42): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(54): Favourite->isFavorite()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 42
+[10-Mar-2022 20:44:05 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+                        user_id = '4'' at line 4 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:42
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php(42): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(54): Favourite->isFavorite()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 42
+[10-Mar-2022 20:44:11 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+                        user_id = '4'' at line 4 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:42
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php(42): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(52): Favourite->isFavorite()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 42
+[10-Mar-2022 20:44:25 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+                        user_id = '4'' at line 4 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:42
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php(42): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(52): Favourite->isFavorite()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 42
+[10-Mar-2022 20:45:22 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+                        user_id = '4'' at line 4 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:42
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php(42): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(52): Favourite->isFavorite()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 42
+[10-Mar-2022 20:46:37 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+                        user_id = '4'' at line 4 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:42
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php(42): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(52): Favourite->isFavorite()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 42
+[10-Mar-2022 20:52:14 Asia/Manila] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+                        user_id = '4'' at line 4 in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:42
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php(42): PDOStatement->execute()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(52): Favourite->isFavorite()
+#2 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 42
+[10-Mar-2022 21:02:46 Asia/Manila] PHP Fatal error:  Uncaught Error: Object of class PDOStatement could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:41
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(49): Favourite->isFavorite()
+#1 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 41
+[10-Mar-2022 21:03:59 Asia/Manila] PHP Fatal error:  Uncaught Error: Object of class PDOStatement could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:41
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(49): Favourite->isFavorite()
+#1 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 41
+[10-Mar-2022 21:04:40 Asia/Manila] PHP Fatal error:  Uncaught Error: Object of class PDOStatement could not be converted to string in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php:41
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(53): Favourite->isFavorite()
+#1 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/classes/Favourite.php on line 41
+[10-Mar-2022 21:07:01 Asia/Manila] PHP Warning:  Undefined variable $favoriteObj in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 56
+[10-Mar-2022 21:07:01 Asia/Manila] PHP Warning:  Undefined variable $favoriteObj in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 56
+[10-Mar-2022 21:07:28 Asia/Manila] PHP Fatal error:  Uncaught DomainException: Malformed UTF-8 characters in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php:471
+Stack trace:
+#0 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php(330): Firebase\JWT\JWT::handleJsonError()
+#1 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php(96): Firebase\JWT\JWT::jsonDecode()
+#2 /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php(49): Firebase\JWT\JWT::decode()
+#3 {main}
+  thrown in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/libs/php-jwt-master/src/JWT.php on line 471
+[10-Mar-2022 21:13:54 Asia/Manila] PHP Warning:  Undefined array key "Authorization" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 22
+[10-Mar-2022 21:13:54 Asia/Manila] PHP Warning:  Undefined array key "date" in /home/teamkrut/news-raw.teamprojectx.xyz/api/v1/news/get-all.php on line 37
