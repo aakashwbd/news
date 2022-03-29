@@ -103,13 +103,16 @@
         let imgSrc = null;
         response.data.forEach(item => {
             if (item.image !== "") {
-                let imageUrls = item.image.split('/')
-                let imageUrl = ''
-                imageUrls.forEach((item, i) => {
-                    if (i > 0) imageUrl += '/' + item
-                })
+                // let imageUrls = item.image.split('/')
+                let imageUrl = item.image
 
-                imgSrc = window.origin + "/uploads/" + imageUrls[2]
+                console.log("img",imageUrl);
+
+                // imageUrls.forEach((item, i) => {
+                //     if (i > 0) imageUrl += '/' + item
+                // })
+
+                imgSrc = imageUrl
             } else {
                 imgSrc = window.origin + "/assets/img/default.png"
             }

@@ -406,15 +406,15 @@
             success: function (res) {
 
                 $('#googleBannerAdmobID').val(res.data[0].banner_id)
-                $('#googleIntertidalAdmobID').val(res.data[0].interstitial_id)
-                $('#googleIntertidalAdmobClick').val(res.data[0].interstitial_click)
+                $('#googleIntertidalAdmobID').val(res.data[0].interesticial_id)
+                $('#googleIntertidalAdmobClick').val(res.data[0].interesticial_click)
                 $('#googleNativeAdID').val(res.data[0].native_id)
                 $('#googleNativeAdPerNews').val(res.data[0].native_per_news)
                 $('#googleNativeAdPerVideo').val(res.data[0].native_per_video)
 
                 $('#facebookBannerAdID').val(res.data[1].banner_id)
-                $('#facebookInterstitialAdID').val(res.data[1].interstitial_id)
-                $('#facebookInterstitialAdClick').val(res.data[1].interstitial_click)
+                $('#facebookInterstitialAdID').val(res.data[1].interesticial_id)
+                $('#facebookInterstitialAdClick').val(res.data[1].interesticial_click)
                 $('#facebookNativeAdID').val(res.data[1].native_id)
                 $('#facebookNativeAdPerNews').val(res.data[1].native_per_news)
                 $('#facebookNativeAdPerVideo').val(res.data[1].native_per_video)
@@ -426,9 +426,9 @@
                 $('#customAdNativeLink').val(res.data[2].native_link)
                 $('#customAdNativePerNews').val(res.data[2].native_per_news)
                 $('#customAdNativePerVideo').val(res.data[2].native_per_video)
-                $('#interstitial_image').val(res.data[2].interstitial_image)
-                $('#customAdInterstitialLink').val(res.data[2].interstitial_link)
-                $('#customAdInterstitialAdClick').val(res.data[2].interstitial_click)
+                $('#interstitial_image').val(res.data[2].interesticial_image)
+                $('#customAdInterstitialLink').val(res.data[2].interesticial_link)
+                $('#customAdInterstitialAdClick').val(res.data[2].interesticial_click)
 
                 $('#startupAdID').val(res.data[3].startup_id)
 
@@ -438,29 +438,31 @@
                 $('#startupStatus').attr("checked", res.data[3].status === 'on' ? true : false)
 
                 let mockFile = {name: 'image', size: 600,};
-                let imageUrls = res.data[2].banner_image.split('/')
-                let imageUrl = ''
-                imageUrls.forEach((item, i) => {
-                    if (i > 0) imageUrl += '/' + item
-                })
+                // let imageUrls = res.data[2].banner_image.split('/')
+                let imageUrl = res.data[2].banner_image
+                // imageUrls.forEach((item, i) => {
+                //     if (i > 0) imageUrl += '/' + item
+                // })
                 bannerImgUpload.displayExistingFile(mockFile, imageUrl);
 
 
                 let mockFile2 = {name: 'image', size: 600,};
-                let imageUrls2 = res.data[2].native_image.split('/')
-                let imageUrl2 = ''
-                imageUrls2.forEach((item, i) => {
-                    if (i > 0) imageUrl2 += '/' + item
-                })
+                // let imageUrls2 = res.data[2].native_image.split('/')
+                let imageUrl2 = res.data[2].native_image
+                // imageUrls2.forEach((item, i) => {
+                //     if (i > 0) imageUrl2 += '/' + item
+                // })
                 nativeImgUpload.displayExistingFile(mockFile2, imageUrl2);
 
 
                 let mockFile3 = {name: 'image', size: 600,};
-                let imageUrls3 = res.data[2].interstitial_image.split('/')
-                let imageUrl3 = ''
-                imageUrls3.forEach((item, i) => {
-                    if (i > 0) imageUrl3 += '/' + item
-                })
+                // let imageUrls3 = res.data[2].interstitial_image.split('/')
+                let imageUrl3 = res.data[2].interesticial_image
+
+                // console.log(res.data[2]);
+                // imageUrls3.forEach((item, i) => {
+                //     if (i > 0) imageUrl3 += '/' + item
+                // })
 
                 interstitialImgUpload.displayExistingFile(mockFile3, imageUrl3);
 

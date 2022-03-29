@@ -64,7 +64,7 @@
 			
 			$response->status = 'success';
 			$response->status_code = 200;
-			$response->data = 'Password successfully changed.';
+			$response->message = 'Password successfully changed.';
 			
 			echo json_encode($response);
 		}

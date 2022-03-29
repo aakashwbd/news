@@ -32,6 +32,7 @@
 			
 			$data=[
 				"id" => $row['id'],
+				"video_type" => $row['video_type'],
 				"title" => $row['title'],
 				"url" => $row['url'],
 				"description" => $row['description'],

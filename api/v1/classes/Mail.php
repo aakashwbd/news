@@ -8,7 +8,7 @@
 	use PHPMailer\PHPMailer\Exception;
 	
 	class Mail {
-		public function mailerFunction ($host, $post, $username, $password, $encryption, $setFrom, $addAddress, $subject, $body){
+		public function mailerFunction ($host, $post, $username, $password, $setFrom, $addAddress, $subject, $body){
 			$mail = new PHPMailer();
 			
 			try {
@@ -18,12 +18,10 @@
 				$mail->Port = $post;
 				$mail->Username = $username;
 				$mail->Password =  $password;
-				$mail->SMTPSecure =  $encryption;
 				
 				$mail->setFrom($setFrom);
 				$mail->addAddress($addAddress);
 				
-				//				$mail->IsHTML(true);
 				$mail->Subject = $subject;
 				$mail->Body = $body;
 				

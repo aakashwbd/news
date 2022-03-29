@@ -42,7 +42,7 @@
 	    public function getOTP($data) {
 		    $sqlQuery = "SELECT * FROM ".$this->db_table." WHERE code=:code AND email=:email";
 		    $stmt = $this->conn->prepare($sqlQuery);
-		    $stmt->bindParam(":code", $data->verification_code);
+		    $stmt->bindParam(":code", $data->otp_code);
 		    $stmt->bindParam(":email", $data->email);
 		    $stmt->execute();
 		    return $stmt;
@@ -60,8 +60,9 @@
 		
 //		if email exist
 	    public function checkByEmail($email) {
-		    $sqlQuery = "SELECT * FROM ".$this->db_table." WHERE email = $email ";
+		    $sqlQuery = "SELECT * FROM ".$this->db_table." WHERE email = :email ";
 		    $stmt = $this->conn->prepare($sqlQuery);
+		    $stmt->bindParam(":email", $email);
 		    $stmt->execute();
 		    return $stmt;
 	    }

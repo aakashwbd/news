@@ -37,14 +37,14 @@
 
             $id = $_GET['id'];
 
-            $delete = $favourite->deleteNewsFavourite($id, $user_id);
+            $delete = $favourite->deleteVideoFavourite($id, $user_id);
             
             // set response code
             http_response_code(200);
             
             $response->status = 'success';
             $response->status_code = 200;
-            $response->success_message = 'Favourite delete successfully.';
+            $response->message = 'Favourite delete successfully.';
             echo json_encode($response);
 		}
 		

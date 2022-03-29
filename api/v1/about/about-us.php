@@ -12,11 +12,39 @@
 	$errors = [];
 	
 	try {
+		$response_data = null;
+		$getSetting = $setting->getSingleData();
+		$count = $getSetting->rowCount();
 		
-		$setting = $setting->getSingleData();
-		$row = $setting->fetch(PDO::FETCH_ASSOC);
+		if ($count > 0){
+			$row = $getSetting->fetch(PDO::FETCH_ASSOC);
+			
+			$data = [
+				'id'=> $row['id'],
+				"system_name" => $row['system_name'],
+				"app_version" => $row['app_version'],
+				"mail_address" => $row['email'],
+				"update_app" => $row['update_app'],
+				"developed_by" => $row['developed_by'],
+
+				"facebook" => $row['facebook_link'],
+				"instagram" => $row['instagram_link'],
+				"twitter" => $row['twitter_link'],
+				"youtube" => $row['youtube_link'],
+
+				"logo" => $row['logo'],
+				"copyright" => $row['copyrights'],
+
+				"description" => $row['description'],
+				"privacy_policy" => $row['privacy_policy'],
+				"cookies_policy" => $row['cookies_policy'],
+				"terms_policy" => $row['terms_policy']
+			];
+			
+			$response_data = $data;
+		}
 		
-		$response_data[] = $row;
+		
 		
 		http_response_code(200);
 		$response->status = 'success';

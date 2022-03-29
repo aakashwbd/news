@@ -1,6 +1,11 @@
 <?php
-	$hosts = $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['HTTP_HOST'];
+	$hosts = $_SERVER['REQUEST_SCHEME'] ? $_SERVER['REQUEST_SCHEME'] : 'http' .'://'. $_SERVER['HTTP_HOST'];
 	$asset = $host . "/assets/";
+	$url = $host . "/admin/";
+
+    // $hosts = $_SERVER['REQUEST_SCHEME'];
+	// $asset = $hosts . '://'. $_SERVER['HTTP_HOST']. "/assets/";
+	// $url = $hosts . '://'. $_SERVER['HTTP_HOST']. "/admin/";
 ?>
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -57,15 +62,15 @@
                 $("#profile_name_outter").text(decodedToken.data.name)
 
                 if(decodedToken.data.image !== null){
-                    let imageUrls = decodedToken.data.image.split('/')
-                    let imageUrl = ''
+                    // let imageUrls = decodedToken.data.image.split('/')
+                    let imageUrl = decodedToken.data.image
+                
+                    // imageUrls.forEach((item, i) => {
+                    //     if (i > 0) imageUrl += '/' + item
+                    // })
 
-                    imageUrls.forEach((item, i) => {
-                        if (i > 0) imageUrl += '/' + item
-                    })
 
-
-                    $("#profile_image").attr("src", '../uploads/'+imageUrls[2])
+                    $("#profile_image").attr("src", imageUrl)
                 }else{
                     $("#profile_image").attr("src", '<?= $asset ?>img/avatar.png')
                 }

@@ -80,10 +80,12 @@
 		
 		// Generating Data Object
 		$response_data = [
-			"id" => $id,
-			"email" => $email,
-			"name" => $name,
-			"role" => "user"
+			'user' => $row
+		];
+		
+		$tokenData = [
+			'id' => $row['id'],
+			'role' => 'user',
 		];
 		
 		// Generating Token
@@ -91,7 +93,7 @@
 			"iat" => $issued_at,
 			"exp" => $expiration_time,
 			"iss" => $issuer,
-			"data" => $response_data
+			"data" => $tokenData
 		];
 		// Generate JWT
 		$jwt_token = JWT::encode($token, $key);

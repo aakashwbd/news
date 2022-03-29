@@ -347,16 +347,16 @@ function getEditData(url, dropzone = null) {
                     if (item[0] === 'image') {
                         if (dropzone) {
                             let mockFile = {name: 'image', size: 600,};
-                            let imageUrls = item[1].split('/')
-                            let imageUrl = ''
+                            // let imageUrls = item[1].split('/')
+                            let imageUrl = item[1]
 
-                            imageUrls.forEach((item, i) => {
-                                if (i > 0) imageUrl += '/' + item
-                            })
+                            // imageUrls.forEach((item, i) => {
+                            //     if (i > 0) imageUrl += '/' + item
+                            // })
 
-                            console.log('imgurl', imageUrl)
+                            // console.log('imgurl', imageUrl)
 
-                            dropzone.displayExistingFile(mockFile, window.origin+imageUrl);
+                            dropzone.displayExistingFile(mockFile, imageUrl);
 
                             $('#logo').val(imageUrl)
                         }
@@ -385,8 +385,27 @@ function getEditData(url, dropzone = null) {
                     }
 
                     if (item[0] === 'host' || item[0] === 'api_key' || item[0] === 'copyright') {
-                        $('#submit-button').text('Update')
+                        if(item[1] === '' || item[1] === null){
+
+                            $('#submit-button').text('Create')
+                        }else{
+                            $('#submit-button').text('Update')
+                        }
                     }
+
+                   
+
+                    // if (item[0] === 'copyright') {
+
+                    //     if(item[1] === '' || item[1] === null){
+      
+                    //         $('#submit-button').text('Create')
+                    //     }else{
+                    //         $('#submit-button').text('Update')
+                    //     }
+
+                       
+                    // }
 
 
                 })
@@ -426,7 +445,7 @@ function generateTable(id, headers, data, actions = [], status = null) {
                             })
 
                             let imageTag = document.createElement('img')
-                            imageTag.setAttribute('src', window.origin+imageUrl)
+                            imageTag.setAttribute('src', imageUrl)
                             imageTag.setAttribute('style', "width: 60px; height: 60px;")
                             tableData.appendChild(imageTag)
                         } else {

@@ -31,7 +31,7 @@
 		
 		    echo json_encode([
 	             "status" => "success",
-	             "data" => $_SERVER['HTTP_HOST'].$uploaded_image
+				 "data" => $_SERVER['REQUEST_SCHEME']. '://'. $_SERVER['HTTP_HOST'] . $uploaded_image
 		    ]);
 	    }
 	

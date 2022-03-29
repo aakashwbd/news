@@ -43,6 +43,9 @@
 	if ($data->category_type === 'select'){
 		$data->category_type = 'non-feature';
 	}
+	if ($data->type === 'image'){
+		$data->video_type = '';
+	}
 	
 	if (!empty($errors)) {
 		$response->status = 'validate_error';

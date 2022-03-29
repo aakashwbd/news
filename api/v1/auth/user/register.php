@@ -91,7 +91,7 @@
 		
 		$response->status = 'success';
 		$response->status_code = 200;
-		$response->data = 'Registration Successfully Done.';
+		$response->message = 'Registration Successfully Done.';
 		echo json_encode($response);
 		
 	} catch (CustomException $e) {

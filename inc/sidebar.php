@@ -19,7 +19,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="../manage-admin/profile.php">
+                        <a class="dropdown-item d-flex align-items-center" href="<?= $url?>manage-admin/profile.php">
                             <i class="bi bi-person"></i>
                             <span>My Profile</span>
                         </a>
@@ -53,7 +53,7 @@
     <ul class="sidebar-nav mt-4" id="sidebar-nav">
         <!-- Dashboard Nav -->
         <li class="nav-item mx-3 mb-4">
-            <a class="nav-link <?= $urlArr[2] === 'dashboard' ? '' : 'collapsed'; ?>" href="/admin/dashboard">
+            <a class="nav-link <?= $urlArr[2] === 'dashboard' ? '' : 'collapsed'; ?>" href="<?= $url?>dashboard">
                 <span class="iconify me-2" data-icon="ic:sharp-space-dashboard" data-width="20" data-height="20"></span>
                 <span>Dashboard</span>
             </a>
@@ -65,7 +65,7 @@
             <!-- ======= Sidebar Category ======= -->
             <li class="nav-item mx-3" id="category">
                 <a class="nav-link <?= $urlArr[2] == 'category' ? '' : 'collapsed'; ?>"
-                   href="/admin/category">
+                   href="<?= $url?>category">
                     <span class="iconify me-2" data-icon="ic:outline-category" data-width="20" data-height="20"></span>
                     <span>Category</span>
                 </a>
@@ -76,7 +76,7 @@
             <!-- ======= Sidebar News ======= -->
             <li class="nav-item mx-3" id="news">
                 <a class="nav-link <?= $urlArr[2] == 'news' && $urlArr[3] !== 'approval.php' ? '' : 'collapsed'; ?>"
-                   href="/admin/news">
+                   href="<?= $url?>news">
                     <span class="iconify me-2" data-icon="emojione-monotone:rolled-up-newspaper" data-width="20"
                           data-height="20"></span>
                     <span>News</span>
@@ -113,7 +113,7 @@
             <!-- ======= Sidebar Manage Admin ======= -->
             <li class="nav-item mx-3" id="manage_admin">
                 <a class="nav-link <?= $urlArr[2] == 'manage-admin'? '' : 'collapsed'; ?>"
-                   href="/admin/manage-admin/">
+                   href="<?= $url?>manage-admin/">
                     <span class="iconify me-2" data-icon="ri:user-settings-fill"></span>
                     <span>Manage Admin</span>
                 </a>
@@ -128,7 +128,7 @@
 
             <!-- ======= Sidebar Manage User ======= -->
             <li class="nav-item mx-3" id="manage_user">
-                <a class="nav-link <?= $urlArr[2] == 'user' ? '' : 'collapsed'; ?>" href="/admin/user">
+                <a class="nav-link <?= $urlArr[2] == 'user' ? '' : 'collapsed'; ?>" href="<?= $url?>user">
                     <span class="iconify me-2" data-icon="ri:user-settings-fill"></span>
                     <span>Manage User</span>
                 </a>
@@ -138,7 +138,7 @@
 
             <!-- ======= Sidebar Comments ======= -->
             <li class="nav-item mx-3" id="comment">
-                <a class="nav-link <?= $urlArr[2] == 'comment' ? '' : 'collapsed'; ?>" href="/admin/comment">
+                <a class="nav-link <?= $urlArr[2] == 'comment' ? '' : 'collapsed'; ?>" href="<?= $url?>comment">
                     <span class="iconify me-2" data-icon="bx:bxs-message" data-width="20" data-height="20"></span>
                     <span>Comments</span>
                 </a>
@@ -147,7 +147,7 @@
 
             <!-- ======= Sidebar Comments ======= -->
             <li class="nav-item mx-3" id="report">
-                <a class="nav-link <?= $urlArr[2] == 'reports' ? '' : 'collapsed'; ?>" href="/admin/reports">
+                <a class="nav-link <?= $urlArr[2] == 'reports' ? '' : 'collapsed'; ?>" href="<?= $url?>reports">
                     <span class="iconify me-2" data-icon="ic:sharp-report" data-width="20" data-height="20"></span>
                     <span>Reports</span>
                 </a>
@@ -160,7 +160,7 @@
             <!-- ======= Sidebar Advertisement ======= -->
             <li class="nav-item mx-3" id="advertisement">
                 <a class="nav-link <?= $urlArr[2] == 'advertisement' ? '' : 'collapsed'; ?>"
-                   href="/admin/advertisement">
+                   href="<?= $url?>advertisement">
                     <span class="iconify me-2" data-icon="bi:badge-ad-fill" data-width="20" data-height="20"></span>
                     <span>Advertisement</span>
                 </a>
@@ -170,7 +170,7 @@
             <!-- ======= Sidebar Notification ======= -->
             <li class="nav-item mx-3" id="notifications">
                 <a class="nav-link <?= $urlArr[2] == 'notification' ? '' : 'collapsed'; ?>"
-                   href="/admin/notification">
+                   href="<?= $url?>notification">
                     <span class="iconify me-2" data-icon="mdi:bell-plus" data-width="20" data-height="20"></span>
                     <span>Notification</span>
                 </a>
@@ -180,7 +180,7 @@
             <!-- ======= Sidebar Setting ======= -->
             <li class="nav-item mx-3" id="settings">
                 <a class="nav-link <?= $urlArr[2] == 'setting' ? '' : 'collapsed'; ?>"
-                   href="/admin/setting">
+                   href="<?= $url?>setting">
                     <span class="iconify me-2" data-icon="ant-design:setting-filled" data-width="20"
                           data-height="20"></span>
                     <span>Settings</span>
@@ -191,7 +191,7 @@
             <!-- ======= Sidebar SMTP ======= -->
             <li class="nav-item mx-3" id="smtp">
                 <a class="nav-link <?= $urlArr[2] == 'smtp' ? '' : 'collapsed'; ?>"
-                   href="/admin/smtp">
+                   href="<?= $url?>smtp">
                     <span class="iconify me-2" data-icon="codicon:server-process" data-width="20"
                           data-height="20"></span>
                     <span>SMTP</span>

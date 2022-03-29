@@ -31,57 +31,57 @@
 	}
 	
 	try {
-	    $data = $_GET['date'];
+		$data = null;
+
+		if (isset($_GET['date'])){
+			$data = $_GET['date'];
+		}
+		
+		
 		$getAll = $video->getByDate($data);
 		$count = $getAll->rowCount();
 		
 		$response_data = [];
-		if ($count !== 0){
-			while ($row = $getAll->fetch(PDO::FETCH_ASSOC)){
-                extract($row);
-                
-                $isFavorite = false;
+		if ($count !== 0) {
+			while ($row = $getAll->fetch(PDO::FETCH_ASSOC)) {
+				extract($row);
 				
-				if($token){
-				    $decoded = JWT::decode($token, $key, ['HS256']);
-				    
-				    if($decoded){
-				        $user_id = $decoded->data->id;
-				        $favouriteData = $favourite->isFavorite($id, $user_id);
-				        $favouriteObj = $favouriteData->fetch(PDO::FETCH_ASSOC);
-				        
-				        if($favouriteObj){
-				            $isFavorite = true;
-				        }
-				    }
+				$isFavorite = false;
+				
+				if ($token) {
+					$decoded = JWT::decode($token, $key, ['HS256']);
+					
+					if ($decoded) {
+						$user_id = $decoded->data->id;
+						$favouriteData = $favourite->isFavorite($id, $user_id);
+						$favouriteObj = $favouriteData->fetch(PDO::FETCH_ASSOC);
+						
+						if ($favouriteObj) {
+							$isFavorite = true;
+						}
+					}
 				}
-                
-				$e = array(
+				
+				$e = [
 					"id" => $id,
 					"news_type" => $type,
-					"category_id"=> json_decode($category_id),
+					"category_id" => json_decode($category_id),
 					"title" => $title,
 					"description" => $description,
 					"video_link" => $link,
 					"image" => $image,
 					"status" => $status,
-					"added_on" => date_format(date_create($created_at),"F d,Y")
-				);
+					"added_on" => date_format(date_create($created_at), "F d,Y")
+				];
 				
 				$response_data[] = $e;
 				// $response_data[] = $row;
 			}
-			
-			$response->status = 'success';
-			$response->status_code = 200;
-			$response->data = $response_data;
-			http_response_code(200);
-		} else{
-			$response->status = 'error';
-			$response->status_code = 404;
-			$response->data = $response_data;
-			http_response_code(404);
 		}
+		$response->status = 'success';
+		$response->status_code = 200;
+		$response->data = $response_data;
+		http_response_code(200);
 		
 		
 		echo json_encode($response);

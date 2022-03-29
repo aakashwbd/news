@@ -66,7 +66,8 @@
 			
 			$data=[
 				"id" => $row['id'],
-				"type" => $row['type'],
+				"news_type" => $row['type'],
+				"video_type"=> $row['video_type'],
 				"category" => json_decode($row['category_id']),
 				"title" => $row['title'],
 				"description" => $row['description'],

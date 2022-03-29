@@ -31,42 +31,36 @@
 		$count = $getAll->rowCount();
 		
 		$response_data = [];
-		if ($count !== 0){
-			while ($row = $getAll->fetch(PDO::FETCH_ASSOC)){
+		if ($count !== 0) {
+			while ($row = $getAll->fetch(PDO::FETCH_ASSOC)) {
 				extract($row);
 				
 				$userData = $user->show($user_id);
 				
-				$e = array(
+				$e = [
 					"id" => $id,
 					"news_id" => $news_id,
-					"comment"=>$comment_text,
-					"added_on" => date_format(date_create($created_at),"F d,Y"),
-				);
+					"comment" => $comment_text,
+					"added_on" => date_format(date_create($created_at), "F d,Y"),
+				];
 				
-				if($userData->rowCount()){
-				    $userObj = $userData->fetch(PDO::FETCH_ASSOC);
-				    
-				    $e['user'] = [
-				        'name' => $userObj['name'],
-				        'image' => $userObj['image']
-				    ];
+				if ($userData->rowCount()) {
+					$userObj = $userData->fetch(PDO::FETCH_ASSOC);
+					
+					$e['user'] = [
+						'name' => $userObj['name'],
+						'image' => $userObj['image']
+					];
 				}
 				
 				$response_data[] = $e;
 			}
 			
-			$response->status = 'success';
-			$response->status_code = 200;
-			$response->data = $response_data;
-			http_response_code(200);
-		} else{
-			$response->status = 'error';
-			$response->status_code = 404;
-			$response->message = 'Data Not Found.';
-			$response->data = $response_data;
-			http_response_code(404);
 		}
+		$response->status = 'success';
+		$response->status_code = 200;
+		$response->data = $response_data;
+		http_response_code(200);
 		
 		
 		echo json_encode($response);

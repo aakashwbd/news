@@ -116,13 +116,13 @@
             if (item.status === 'Active') {
 
                 if (item.image !== "") {
-                    let imageUrls = item.image.split('/')
-                    let imageUrl = ''
-                    imageUrls.forEach((item, i) => {
-                        if (i > 0) imageUrl += '/' + item
-                    })
+                    // let imageUrls = item.image.split('/')
+                    let imageUrl =item.image
+                    // imageUrls.forEach((item, i) => {
+                    //     if (i > 0) imageUrl += '/' + item
+                    // })
 
-                    imgSrc = window.origin + "/uploads/" + imageUrls[2]
+                    imgSrc = imageUrl
                 } else {
                     imgSrc = window.origin + "/assets/img/default.png"
                 }

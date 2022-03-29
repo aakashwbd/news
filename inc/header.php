@@ -1,7 +1,11 @@
 <?php
-	$hosts = $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['HTTP_HOST'];
+	$hosts = $_SERVER['REQUEST_SCHEME'] ? $_SERVER['REQUEST_SCHEME'] : 'http' .'://'. $_SERVER['HTTP_HOST'];
 	$asset = $hosts . "/assets/";
 	$url = $hosts."/admin/";
+
+    // $hosts = $_SERVER['REQUEST_SCHEME'];
+	// $asset = $hosts . '://'. $_SERVER['HTTP_HOST']. "/assets/";
+	// $url = $hosts . '://'. $_SERVER['HTTP_HOST']. "/admin/";
  
 	
 	require_once __DIR__.'/../api/v1/classes/InstallChecker.php';

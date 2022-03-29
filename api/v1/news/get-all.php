@@ -1,8 +1,8 @@
 <?php
-    ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
+//	ini_set('display_errors', 1);
+//	ini_set('display_startup_errors', 1);
+//	error_reporting(E_ALL);
+	
 	include_once __DIR__ . "/../bootstrap/header.php";
 	include_once __DIR__ . '/../config/database.php';
 	include_once __DIR__ . '/../classes/News.php';
@@ -34,61 +34,62 @@ error_reporting(E_ALL);
 	}
 	
 	try {
-	    $data = $_GET['date'];
+		$data = null;
+
+		if (isset($_GET['date'])){
+			$data = $_GET['date'];
+		}
+		
 		$getAll = $news->getByDate($data);
+		
+		
 		$count = $getAll->rowCount();
 		
 		$response_data = [];
-		if ($count !== 0){
-			while ($row = $getAll->fetch(PDO::FETCH_ASSOC)){
+		
+		if ($count > 0) {
+			while ($row = $getAll->fetch(PDO::FETCH_ASSOC)) {
 				extract($row);
 				
 				$isFavorite = false;
 				
-				if($token){
-				    $decoded = JWT::decode($token, $key, ['HS256']);
-				    
-				    if($decoded){
-				        $user_id = $decoded->data->id;
-				        $favouriteData = $favourite->isFavorite($id, $user_id);
-				        $favouriteObj = $favouriteData->fetch(PDO::FETCH_ASSOC);
-				        
-				        if($favouriteObj){
-				            $isFavorite = true;
-				        }
-				    }
+				if ($token) {
+					$decoded = JWT::decode($token, $key, ['HS256']);
+					
+					if ($decoded) {
+						$user_id = $decoded->data->id;
+						$favouriteData = $favourite->isFavorite($id, $user_id);
+						$favouriteObj = $favouriteData->fetch(PDO::FETCH_ASSOC);
+						
+						if ($favouriteObj) {
+							$isFavorite = true;
+						}
+					}
 				}
 				
-	            
-	            
 				
-				$e = array(
+				$e = [
 					"id" => $id,
+					"video_type" => $video_type,
 					"news_type" => $type,
-					"category_id"=> json_decode($category_id),
+					"category_id" => json_decode($category_id),
 					"category_type" => $category_type,
 					"title" => $title,
 					"description" => $description,
 					"video_link" => $link,
 					"image" => $image,
 					"status" => $status,
-					"added_on" => date_format(date_create($created_at),"F d,Y"),
+					"added_on" => date_format(date_create($created_at), "F d,Y"),
 					"is_favorite" => $isFavorite
-				);
+				];
 				
 				$response_data[] = $e;
 			}
-			
-			$response->status = 'success';
-			$response->status_code = 200;
-			$response->data = $response_data;
-			http_response_code(200);
-		} else{
-			$response->status = 'error';
-			$response->status_code = 404;
-			$response->data = $response_data;
-			http_response_code(404);
 		}
+		$response->status = 'success';
+		$response->status_code = 200;
+		$response->data = $response_data;
+		http_response_code(200);
 		
 		
 		echo json_encode($response);

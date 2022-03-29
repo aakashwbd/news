@@ -13,7 +13,7 @@
 	
 	$response = (object)['status' => 'success'];
 	$errors = [];
-
+	
 	// if (empty($data->title)) {
 	// 	$errors[] = (object)['field' => 'search', 'error' => 'News title is required.'];
 	// }
@@ -33,25 +33,18 @@
 		
 		$response_data = [];
 		
-		if ($count !== 0){
-			while ($row = $search->fetch(PDO::FETCH_ASSOC)){
+		if ($count !== 0) {
+			while ($row = $search->fetch(PDO::FETCH_ASSOC)) {
 				
 				$response_data[] = $row;
 			}
-
-			$response->status = 'success';
-			$response->status_code = 200;
-			$response->data = $response_data;
-			http_response_code(200);
-
-		} else{
-			$response->status = 'error';
-			$response->status_code = 404;
-			$response->data = $response_data;
-			http_response_code(404);
 		}
-
-
+		$response->status = 'success';
+		$response->status_code = 200;
+		$response->data = $response_data;
+		http_response_code(200);
+		
+		
 		echo json_encode($response);
 		
 	} catch (CustomException $e) {

@@ -33,13 +33,15 @@
 		$exist_url = $row['url'];
 		$exist_description = $row['description'];
 		$exist_image = $row['image'];
+		$exist_video_type = $row['video_type'];
 		
 		$title = $data->title ? $data->title : $exist_title;
 		$url = $data->url ? $data->url : $exist_url;
 		$description = $data->description ? $data->description : $exist_description;
 		$image = $data->logo ? $data->logo: $exist_image;
+		$video_type = $data->video_type ? $data->video_type: $exist_video_type;
 		
-		$update = $video->update($title,$url, $description, $image, $id);
+		$update = $video->update($video_type, $title,$url, $description, $image, $id);
 		
 		$response->status = 'success';
 		$response->status_code = 200;

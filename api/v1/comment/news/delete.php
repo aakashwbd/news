@@ -27,7 +27,7 @@
 		$delete = $comment->deleteNewsComment($id);
 		$response->status = 'success';
 		$response->status_code = 200;
-		$response->success_message = 'News Comment delete successfully.';
+		$response->message = 'News Comment delete successfully.';
 		http_response_code(200);
 		
 		echo json_encode($response);

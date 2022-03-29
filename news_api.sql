@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 09, 2022 at 10:49 AM
+-- Generation Time: Mar 25, 2022 at 02:33 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -45,7 +45,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `email`, `role`, `access`, `phone`, `image`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'Super Admin', 'super@admin.com', 'superAdmin', NULL, '01900000000', 'localhost:7074/uploads/734ad38bd4.jpg', 'e10adc3949ba59abbe56e057f20f883e', '2022-02-15 06:51:52', '2022-03-09 06:26:48'),
+(1, 'Super Admin', 'super@admin.com', 'superAdmin', NULL, '01900000000', '127.0.0.1:9000/uploads/a10a9544b4.jpg', 'e10adc3949ba59abbe56e057f20f883e', '2022-02-15 06:51:52', '2022-03-25 10:40:23'),
 (3, 'Demo User', 'demoadmin@news.com', 'superAdmin', NULL, '123456', NULL, '61561eeb5b841f02e7d5a1608f5ad0b5', '2022-02-15 11:28:54', '0000-00-00 00:00:00'),
 (5, 'Rupom', 'rupom@gmail.com', 'admin', '[\"category\",\"news\"]', '01950012841', '127.0.0.1:9000/uploads/a10a9544b4.jpg', 'e10adc3949ba59abbe56e057f20f883e', '2022-03-09 08:22:48', '0000-00-00 00:00:00');
 
@@ -81,10 +81,10 @@ CREATE TABLE `advertisement` (
 --
 
 INSERT INTO `advertisement` (`id`, `ad_type`, `status`, `banner_id`, `banner_link`, `banner_image`, `interstitial_id`, `interstitial_link`, `interstitial_click`, `interstitial_image`, `native_id`, `native_link`, `native_per_news`, `native_per_video`, `native_image`, `startup_id`, `created_at`, `updated_at`) VALUES
-(9, 'google', 'on', 'google', NULL, NULL, 'google id', NULL, '2', NULL, 'asdfasdf', NULL, '4', '3', NULL, NULL, '2022-03-09 09:28:51', '2022-03-09 09:28:51'),
-(10, 'facebook', 'off', 'facebook', NULL, NULL, 'facebook id', NULL, '3', NULL, 'asdfasdfasdf', NULL, '4', '4', NULL, NULL, '2022-03-09 09:27:00', '2022-03-09 09:27:00'),
-(11, 'custom', 'off', NULL, 'sdfgsdgfsd', '127.0.0.1:9000/uploads/5af31cf533.png', NULL, 'sgfdfgsd', '3', '127.0.0.1:9000/uploads/7256fbf653.jpg', NULL, 'ghjdfhjdfh', '3', '2', '127.0.0.1:9000/uploads/62b3496f8e.jpg', NULL, '2022-03-09 09:28:37', '2022-03-09 09:28:37'),
-(12, 'startup', 'off', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'sdfadsfa', '2022-03-09 08:49:03', '0000-00-00 00:00:00');
+(1, 'google', 'off', 'google', NULL, NULL, 'google id', NULL, '2', NULL, 'fvbgdfsg', NULL, '0', '0', NULL, NULL, '2022-03-25 11:35:58', '2022-03-25 11:35:58'),
+(2, 'facebook', 'off', 'facebook', NULL, NULL, NULL, NULL, '3', NULL, 'sdfgsdfg', NULL, '0', '0', NULL, NULL, '2022-03-25 11:35:58', '2022-03-25 11:35:58'),
+(3, 'custom', 'off', NULL, NULL, 'http://192.168.1.228:9000/uploads/3cc8b60618.jpg', NULL, NULL, '0', 'http://192.168.1.228:9000/uploads/219a57e821.jpg', NULL, NULL, '0', '0', 'http://192.168.1.228:9000/uploads/4ed51fcc3f.jpg', NULL, '2022-03-25 11:41:45', '2022-03-25 11:41:45'),
+(4, 'startup', 'off', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-03-25 11:17:26', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -106,8 +106,7 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `image`, `status`, `created_at`, `update_at`) VALUES
-(8, 'Sports2', '127.0.0.1:9000/uploads/2c63db7b20.png', 'Active', '2022-02-16 06:32:03', '2022-03-09 07:38:17'),
-(9, 'Life Style', '', 'Active', '2022-03-09 06:54:42', '2022-03-09 07:50:09');
+(1, 'Entertainment', 'http://192.168.1.228:9000/uploads/4b6aed0524.jpg', 'Active', '2022-03-25 10:40:56', '2022-03-25 10:44:20');
 
 -- --------------------------------------------------------
 
@@ -142,9 +141,10 @@ CREATE TABLE `news` (
   `title` varchar(255) NOT NULL,
   `description` longtext NOT NULL,
   `link` varchar(255) DEFAULT NULL,
+  `video_type` varchar(255) DEFAULT NULL,
   `image` varchar(255) NOT NULL,
   `status` varchar(255) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` date NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -152,11 +152,9 @@ CREATE TABLE `news` (
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`id`, `type`, `category_type`, `category_id`, `title`, `description`, `link`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(4, 'image', NULL, '[\"8\",\"9\"]', 'changed title', '<p>description changed</p>', NULL, '127.0.0.1:9000/uploads/c28bdf75f7.png', 'Active', '2022-02-16 06:34:53', '2022-03-09 07:54:07'),
-(6, 'image', 'feature', '[\"8\"]', 'dfgsdf', '<p>dfasdfasdf</p>', '', '', 'Active', '2022-03-09 09:41:15', '0000-00-00 00:00:00'),
-(7, 'image', 'select', '[\"8\"]', 'mn bn,', '<p>xgfbhnxdfghnf</p>', '', '', 'Active', '2022-03-09 09:41:46', '0000-00-00 00:00:00'),
-(8, 'image', 'feature', '[\"8\"]', '5tyerty', '<p>rtgaewrwte</p>', NULL, '', 'Active', '2022-03-09 09:42:56', '2022-03-09 09:48:49');
+INSERT INTO `news` (`id`, `type`, `category_type`, `category_id`, `title`, `description`, `link`, `video_type`, `image`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'image', 'feature', '[\"1\"]', 'Ahmed Jesper is Shoking', '<p>hello jesper</p>', NULL, 'youtube', 'http://192.168.1.228:9000/uploads/c3fc00f158.jpg', 'Active', '2022-03-25', '2022-03-25 12:43:27'),
+(2, 'video', 'feature', '[\"1\"]', 'Ahmed Jesper is shoking by his Scandle Video', '<p>dfsgasdfasdf</p>', 'hgghgfh', 'dailymotion', 'http://192.168.1.228:9000/uploads/ebc5539dc1.jpg', 'Active', '2022-03-25', '2022-03-25 10:51:16');
 
 -- --------------------------------------------------------
 
@@ -213,6 +211,13 @@ CREATE TABLE `news_view` (
   `news_id` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `news_view`
+--
+
+INSERT INTO `news_view` (`id`, `news_id`) VALUES
+(1, '2');
+
 -- --------------------------------------------------------
 
 --
@@ -228,6 +233,13 @@ CREATE TABLE `notifications` (
   `item_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `notifications`
+--
+
+INSERT INTO `notifications` (`id`, `title`, `description`, `link`, `image`, `item_id`, `created_at`) VALUES
+(1, 'gfasdf', 'sdafasdf', NULL, '://192.168.1.228:9000/uploads/b386edd84f.png', 1, '2022-03-25 11:42:15');
 
 -- --------------------------------------------------------
 
@@ -248,7 +260,7 @@ CREATE TABLE `otp` (
 --
 
 INSERT INTO `otp` (`id`, `email`, `code`, `created_at`, `expired_at`) VALUES
-(3, 'super@admin.com', '753210', '06:21:59', '07:21:59');
+(3, 'sohag@gmail.com', '170206', '04:55:33', '05:55:33');
 
 -- --------------------------------------------------------
 
@@ -298,7 +310,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `system_name`, `app_version`, `email`, `update_app`, `developed_by`, `facebook_link`, `instagram_link`, `twitter_link`, `youtube_link`, `logo`, `description`, `copyrights`, `privacy_policy`, `cookies_policy`, `terms_policy`) VALUES
-(1, 'News App', '1.01', 'news@app.com', 'https://play.store', 'Project X Ltd.', 'fb link', 'insta link', 'twit link', 'you link', '/uploads/37472806d0.jpg', '<p>dsfasdfasdf</p>', 'copyrithts', '<p>dsfasdfasdfasf</p>', '<p>asfadsfdasfasdf</p>', '');
+(1, 'News App', '1.01', 'news@app.com', 'https://play.store', 'Project X Ltd.', 'fb link', 'insta link', 'twit link', 'you link', 'http://192.168.1.228:9000/uploads/3268b9267f.jpg', '<p>des</p>', 'copyrithts', '<p>pri</p>', '<p>cook</p>', '<p>ter</p>');
 
 -- --------------------------------------------------------
 
@@ -322,7 +334,7 @@ CREATE TABLE `smtp` (
 --
 
 INSERT INTO `smtp` (`id`, `host`, `port`, `username`, `password`, `encryption`, `created_at`, `updated_at`) VALUES
-(1, 'smtp.mailtrap.io', '2525', '417210714e4051', '0d98881139c7ec', 'tsl', '2022-02-15 09:55:32', '2022-03-09 08:34:06');
+(1, 'smtp.mailtrap.io', '2525', '417210714e4051', '0d98881139c7ec', 'tsl', '2022-03-25 10:55:18', '2022-03-25 10:55:25');
 
 -- --------------------------------------------------------
 
@@ -346,8 +358,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `password`, `image`, `created_at`, `updated_at`) VALUES
-(3, 'Rupom', 'rupom@gmail.com', '01950012841', 'e10adc3949ba59abbe56e057f20f883e', 'localhost:7074/uploads/884ef946f5.jpg', '2022-02-16 07:00:13', '0000-00-00 00:00:00'),
-(4, 'AL Abir', 'abir@hello.com', '01950012841', 'e10adc3949ba59abbe56e057f20f883e', '127.0.0.1:9000/uploads/104f9f4d4f.jpg', '2022-03-09 08:29:30', '2022-03-09 08:32:30');
+(1, 'sohag', 'sohag@gmail.com', '0134123413432', 'fcea920f7412b5da7be0cf42b8c93759', '://192.168.1.228:9000/uploads/all/5ff613c3c4.jpg', '2022-03-25 10:52:19', '2022-03-25 10:57:03');
 
 -- --------------------------------------------------------
 
@@ -357,12 +368,13 @@ INSERT INTO `users` (`id`, `name`, `email`, `phone`, `password`, `image`, `creat
 
 CREATE TABLE `videos` (
   `id` int(11) NOT NULL,
+  `video_type` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
   `url` varchar(255) NOT NULL,
   `description` longtext DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `status` enum('Active','Inactive') NOT NULL DEFAULT 'Active',
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` date NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -370,8 +382,8 @@ CREATE TABLE `videos` (
 -- Dumping data for table `videos`
 --
 
-INSERT INTO `videos` (`id`, `title`, `url`, `description`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(5, 'Video Title Edited', 'Video URL', '<p>asdfasfasdfadsfsdf</p>', '127.0.0.1:9000/uploads/03790333a7.jpg', 'Inactive', '2022-03-09 08:00:30', '2022-03-09 08:07:16');
+INSERT INTO `videos` (`id`, `video_type`, `title`, `url`, `description`, `image`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'youtube', 'dfadsf', 'adfsasdf', '<p>asdfasdf</p>', 'http://192.168.1.228:9000/uploads/490dc87b0e.jpg', 'Active', '2022-03-25', '2022-03-25 12:44:12');
 
 -- --------------------------------------------------------
 
@@ -567,13 +579,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `advertisement`
 --
 ALTER TABLE `advertisement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `manage_notification`
@@ -585,13 +597,13 @@ ALTER TABLE `manage_notification`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `news_comment`
 --
 ALTER TABLE `news_comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `news_favourite`
@@ -609,13 +621,13 @@ ALTER TABLE `news_report`
 -- AUTO_INCREMENT for table `news_view`
 --
 ALTER TABLE `news_view`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `otp`
@@ -645,19 +657,19 @@ ALTER TABLE `smtp`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `video_comment`
 --
 ALTER TABLE `video_comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `video_favourite`

@@ -25,29 +25,23 @@
 		$count = $getAll->rowCount();
 		
 		$response_data = [];
-		if ($count !== 0){
-			while ($row = $getAll->fetch(PDO::FETCH_ASSOC)){
-				extract($row);
-				$e = array(
-					"id" => $id,
-					"name" => $name,
-					"image"=>$image,
-					"status" => $status
-				);
+		if ($count !== 0) {
+			while ($row = $getAll->fetch(PDO::FETCH_ASSOC)) {
+				//				extract($row);
+				//				$e = array(
+				//					"id" => $id,
+				//					"name" => $name,
+				//					"image"=>$image,
+				//					"status" => $status
+				//				);
 				
-				$response_data[] = $e;
+				$response_data[] = $row;
 			}
-			
-			$response->status = 'success';
-			$response->status_code = 200;
-			$response->data = $response_data;
-			http_response_code(200);
-		} else{
-			$response->status = 'error';
-			$response->status_code = 404;
-			$response->data = $response_data;
-			http_response_code(404);
 		}
+		$response->status = 'success';
+		$response->status_code = 200;
+		$response->data = $response_data;
+		http_response_code(200);
 		
 		
 		echo json_encode($response);

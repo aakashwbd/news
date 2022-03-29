@@ -31,6 +31,7 @@
 			$stmt->execute();
 			return $stmt;
 		}
+		
 		// GET ALL
 		public function getByInactive() {
 			$sqlQuery = "SELECT * FROM " . $this->db_table . " WHERE status = 'Inactive' ";
@@ -45,45 +46,78 @@
 			$stmt = $this->conn->prepare($sqlQuery);
 			$stmt->execute();
 			return $stmt;
-		}	
+		}
 		
 		// GET ALL By Date
 		public function getByDate($data) {
-			if($data){
-				$date=date_create($data);
-				$dateFormate = date_format($date,"Y-m-d");
+			
+			
+			if ($data !== null) {
+				$date = date_create($data);
+				$dateFormate = date_format($date, "Y-m-d");
 				
 				$sqlQuery = "SELECT *  FROM " . $this->db_table . " WHERE status = 'Active' AND  created_at = :created_at";
-			    
+				
 				$stmt = $this->conn->prepare($sqlQuery);
 				$stmt->bindParam(":created_at", $dateFormate);
-			} else{
+				
+				
+			}
+			else {
 				$currentDate = date('Y-m-d');
-				$sqlQuery = "SELECT * FROM " . $this->db_table . " WHERE  'Active' AND created_at = :created_at";
+
+			
+//				var_dump($currentDate);
+				$sqlQuery = "SELECT * FROM " . $this->db_table . " WHERE status = 'Active' AND created_at = :created_at";
 				$stmt = $this->conn->prepare($sqlQuery);
 				$stmt->bindParam(":created_at", $currentDate);
+				
 			}
-
+			
 			$stmt->execute();
 			return $stmt;
 		}
-
-
+		
+		
+		// GET ALL By Date Feature
+		public function getByDateFeature($data) {
+			if ($data) {
+				$date = date_create($data);
+				$dateFormate = date_format($date, "Y-m-d");
+				
+				$sqlQuery = "SELECT *  FROM " . $this->db_table . " WHERE status = 'Active' AND  created_at = :created_at AND category_type = 'feature' ";
+				
+				$stmt = $this->conn->prepare($sqlQuery);
+				$stmt->bindParam(":created_at", $dateFormate);
+			}
+			else {
+				$currentDate = date('Y-m-d');
+				$sqlQuery = "SELECT * FROM " . $this->db_table . " WHERE  status = 'Active' AND created_at = :created_at AND category_type = 'feature'";
+				$stmt = $this->conn->prepare($sqlQuery);
+				$stmt->bindParam(":created_at", $currentDate);
+			}
+			
+			$stmt->execute();
+			return $stmt;
+		}
+		
+		
 		// GET ALL
 		public function getByFeatureDate($data) {
-			if($data){
-			    $date=date_create($data);
-                $dateFormate = date_format($date,"Y/m/d");
+			if ($data) {
+				$date = date_create($data);
+				$dateFormate = date_format($date, "Y/m/d");
 				$sqlQuery = "SELECT * FROM " . $this->db_table . " WHERE category_type = 'feature' AND  created_at = :created_at";
 				$stmt = $this->conn->prepare($sqlQuery);
 				$stmt->bindParam(":created_at", $dateFormate);
-			} else{
-			    $currentDate = date('Y-m-d');
+			}
+			else {
+				$currentDate = date('Y-m-d');
 				$sqlQuery = "SELECT * FROM " . $this->db_table . " WHERE category_type = 'feature' AND created_at = :created_at";
 				$stmt = $this->conn->prepare($sqlQuery);
 				$stmt->bindParam(":created_at", $currentDate);
 			}
-
+			
 			$stmt->execute();
 			return $stmt;
 		}
@@ -143,6 +177,7 @@
                         title = :title,
                         description = :description,
                         link = :link,
+                        video_type = :video_type,
                         image = :image,
 						status = :status ";
 			
@@ -160,6 +195,7 @@
 			$stmt->bindParam(":description", $data->description);
 			$stmt->bindParam(":image", $data->logo);
 			$stmt->bindParam(":link", $data->link);
+			$stmt->bindParam(":video_type", $data->video_type);
 			$stmt->bindParam(":status", $status);
 			
 			
@@ -208,7 +244,7 @@
 		
 		// UPDATE News without image
 		public function update($data, $id) {
-
+			
 			$sqlQuery = "UPDATE " . $this->db_table . "
                     SET
                         type = :type,
@@ -217,12 +253,13 @@
                         title = :title,
                         description = :description,
                         link = :link,
+						video_type= :video_type,
                         image = :image
                     WHERE 
                        id = :id";
 			
 			$stmt = $this->conn->prepare($sqlQuery);
-		
+			
 			
 			// bind data
 			$stmt->bindParam(":type", $data->type);
@@ -232,6 +269,7 @@
 			$stmt->bindParam(":description", $data->description);
 			$stmt->bindParam(":image", $data->logo);
 			$stmt->bindParam(":link", $data->link);
+			$stmt->bindParam(":video_type", $data->video_type);
 			$stmt->bindParam(":id", $id);
 			
 			if ($stmt->execute()) {

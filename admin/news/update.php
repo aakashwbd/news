@@ -83,6 +83,23 @@
                                 </div>
                             </div>
 
+
+
+                            <div class="row align-items-center mb-3 d-none" id="videoType">
+                                <div class="col-lg-3 col-12">
+                                    <label class="my-1" for="title" id="title_label">Video Type</label>
+                                </div>
+                                <div class="col-lg-9 col-12">
+                                    <select name="video_type" id="video_type" class="form-select">
+                                        <option value="youtube">Youtube</option>
+                                        <option value="dailymotion">Dailymotion</option>
+                                        <option value="vimeo">Vimeo</option>
+                                        <option value="m3u8">M3u8</option>
+                                        <option value="mp4">Mp4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
                             <!-- News Description -->
                             <div class="row align-items-center mb-3">
                                 <div class="col-lg-3 col-12">
@@ -185,8 +202,10 @@
         let type = $('#type').val();
         if (type === "video") {
             $("#video_link").removeClass("d-none");
+            $("#videoType").removeClass("d-none");
         } else {
             $("#video_link").addClass("d-none");
+            $("#videoType").addClass("d-none");
         }
     })
 
@@ -199,6 +218,8 @@
             type: 'GET',
             url: window.origin + "/api/v1/news/getEdit.php?id=<?= $_GET['id']?>",
             success: function (res) {
+                    console.log('news_res:', res)
+
                 $('#type').val(res.data[0].type)
                 $('#category_type').val(res.data[0].category_type)
 
@@ -206,19 +227,27 @@
                     $("#video_link").removeClass("d-none");
                     $("#link").val(res.data[0].link);
                 }
+                if (res.data[0].video_type === "youtube" || res.data[0].video_type === "dailymotion" || res.data[0].video_type === "vimeo" || res.data[0].video_type === "m3u8" ) {
+                    $("#videoType").removeClass("d-none");
+                    $("#video_type").val(res.data[0].video_type);
+                }
+
+                
+                            
+                            
 
                 $('#title').val(res.data[0].title)
                 newsEditor.setData(res.data[0].description)
 
                 let mockFile = {name: 'image', size: 600,};
-                let imageUrls = res.data[0].image.split('/')
-                let imageUrl = ''
-                imageUrls.forEach((item, i) => {
-                    if (i > 0) imageUrl += '/' + item
-                })
+                // let imageUrls = res.data[0].image.split('/')
+                let imageUrl = res.data[0].image
+                // imageUrls.forEach((item, i) => {
+                //     if (i > 0) imageUrl += '/' + item
+                // })
 
 
-                myDropzone.displayExistingFile(mockFile, window.origin + imageUrl);
+                myDropzone.displayExistingFile(mockFile,imageUrl);
 
                 catList.forEach((item) => {
                     if (jQuery.inArray(item.category_id, res.data[0].category_id) !== -1) {

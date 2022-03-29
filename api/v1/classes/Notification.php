@@ -49,6 +49,7 @@
             return $stmt;
         }
 		
+		
 		// Check Manage Notification Data Exist or Not
         public function checkSetting(){
             $sqlQuery = "SELECT * FROM ".$this->db_table2." " ;

@@ -13,6 +13,23 @@
                         <hr>
 
                         <form id="form" name="form" novalidate>
+
+                            <div class="row align-items-center mb-3">
+                                <div class="col-lg-3 col-12">
+                                    <label class="my-1" for="title" id="title_label">Video Type</label>
+                                </div>
+                                <div class="col-lg-9 col-12">
+                                    <select name="video_type" id="video_type" class="form-select">
+                                        <option value="youtube">Youtube</option>
+                                        <option value="dailymotion">Dailymotion</option>
+                                        <option value="vimeo">Vimeo</option>
+                                        <option value="m3u8">M3u8</option>
+                                        <option value="mp4">Mp4</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
                             <!-- Video Title -->
                             <div class="row align-items-center mb-3">
                                 <div class="col-lg-3 col-12">

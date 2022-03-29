@@ -27,7 +27,7 @@
 		$delete = $comment->deleteVideoComment($id);
 		$response->status = 'success';
 		$response->status_code = 200;
-		$response->success_message = 'Video Comment delete successfully.';
+		$response->message = 'Video Comment delete successfully.';
 		http_response_code(200);
 		
 		echo json_encode($response);
